@@ -50,11 +50,6 @@
     color: var(--med);
 }
 
-.name:visited {
-    color: var(--med);
-
-}
-
 .classLinks {
     color: var(--dark);
     text-decoration: underline; 
@@ -65,7 +60,6 @@
 
 .classLinks:visited {
     text-decoration-color: #FF7F11;
-    color: var(--dark);
 
 }
 
@@ -86,6 +80,7 @@
 
 .smallIcon {
     width: 15px;
+    padding:0px;
 }
 
 .footerSpacer {
@@ -94,9 +89,32 @@
     margin:0;
 }
 
+.footerList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.footerli {
+    display: inline;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
 .harvardClassLinkAllign {
     text-align: right;
     padding: 20px;
+}
+
+.githubLinkAllign {
+    text-align: left;
+    padding: 20px;
+}
+
+.githubLink {
+    color: var(--med);
+    font-size: 15px;
 }
 
 .harvardClassLink {
@@ -104,14 +122,24 @@
     font-size: 15px;
 }
 
+.profilePhoto {
+    max-height: 300px;
+    width: 50% auto;
+    padding-bottom: 10px;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
 
 main {
     padding: 10px;
     max-width: 50%;
     margin: 0 auto;
-    text-align: center;
-    font-size: 24px
-    
+
 }
 
 body {
@@ -119,16 +147,26 @@ body {
     margin: 0;
     font-family: 'Montserrat';
     background-color: var(--med);
+    line-height: 1.5;
+
 }
 
 img {
-    max-height: 300px;
-    width: 50% auto;   
+    max-height: 500px;
+    width: 50% auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.imgCenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 footer {
     padding: 20px;
-    padding-bottom:50px;
+    padding-bottom: 60px;
     position: static;
     background: var(--dark);
     bottom: 0;
@@ -141,4 +179,16 @@ footer {
 table {
     margin-left: auto;
     margin-right: auto;
+}
+
+p {
+    color: var(--dark);
+}
+
+a:hover {
+    color:var(--secondary);
+}
+
+a {
+    color:var(--dark);
 }
