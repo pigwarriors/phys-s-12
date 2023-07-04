@@ -1,4 +1,144 @@
-body {
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+  
+:root {
+    --primary: #284B63;
+    --secondary: #FF7F11;
+    --dark: #353535;
+    --med: #D9D9D9;
+    --light: #FFFFFF;
+}
+
+
+.HomeMain {
+    padding: 10px;
+    max-width: 100em;
     margin: 0 auto;
-    max-width: 50em;
+    text-align: center;
+    color: var(--med);
+}
+
+.HomeHeader {
+    padding: 20px;
+    padding-bottom:50px;
+    position: static;
+    background: var(--primary);
+    top: 0;
+    right: 0;
+    left: 0;
+    color: var(--primary);
+    font-size: 25px;
+    z-index: 2;
+   
+}
+
+.HeaderText {
+    text-align: center;
+    padding-bottom: 0px;
+    padding-top: 15px;
+    font-size: 50px;
+    font-weight: bold;
+    text-decoration: none;
+    color: var(--light);
+}
+
+.HeaderText:visited {
+    color: var(--light);
+}
+
+.name {
+    text-align: center;
+    color: var(--med);
+}
+
+.name:visited {
+    color: var(--med);
+
+}
+
+.classLinks {
+    color: var(--dark);
+    text-decoration: underline; 
+    text-decoration-color: var(--med);
+    font-size: 30px;
+
+}
+
+.classLinks:visited {
+    text-decoration-color: #FF7F11;
+    color: var(--dark);
+
+}
+
+.classesDiv {
+    padding: 50px;
+    padding-bottom: 0px;
+    text-align: center;
+}
+
+.icon {
+    width: 50px;
+    padding: 10px;
+}
+
+.iconLink {
+    display:contents;
+}
+
+.smallIcon {
+    width: 15px;
+}
+
+.footerSpacer {
+    padding-top: 50px;
+    padding-bottom: auto;
+    margin:0;
+}
+
+.harvardClassLinkAllign {
+    text-align: right;
+    padding: 20px;
+}
+
+.harvardClassLink {
+    color: var(--med);
+    font-size: 15px;
+}
+
+
+main {
+    padding: 10px;
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 24px
+    
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Montserrat';
+    background-color: var(--med);
+}
+
+img {
+    max-height: 300px;
+    width: 50% auto;   
+}
+
+footer {
+    padding: 20px;
+    padding-bottom:50px;
+    position: static;
+    background: var(--dark);
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 25px;
+    z-index: 2;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
 }
