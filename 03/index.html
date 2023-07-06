@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="Images/TabIcon.png">
+    <link rel="icon" type="image/png" href="../Images/TabIcon.png">
     <title>Phys-s-12 - #PageName - Brian Twitchell</title>
     <link rel="stylesheet" href="../style.css">
 </head>
@@ -22,10 +22,87 @@
     
     <main class="mainText">
         <h1 class="pageHeader">Class 3: Kinematic Sculpture</h1>
+        <h2>Inspiration: </h2>
+        <iframe width="900" height="500" src="https://www.youtube.com/embed/0_22x26qYPA?start=419" title="YouTube video player" 
+        frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        allowfullscreen class="imgCenter"></iframe>
         <p>
-            This class's assignment was to create a kinematic sculpture. A kinematic sculpture is just a sculpture that moves.
-            
+            I was inspired by this video to create a string kinematic sculpture.
+            To modify the design I decided that the string would make a shape at some point in the movement.
+            I wanted a shape that would be interesting to look at the strings move and something that is simple enough to design.
+            After brainstorming for a bit I decided on a star shape. This was because it would be easy 
+            for the strings to create interesting patterns and it would be relatively easy to cad because it has 5 symmetrical points.
+        
         </p>
+        <h2>Design Process:</h2>
+        <p>
+            Before I started designing I knew that I would mainly be using a laser cutter to fabricate this sculpture. This meant that I would
+            have to figure out how to use thin, almost 2D sheets of material to make the sculpture rather than creating 3 dimensional parts.
+        </p>
+        <h2>Concept Art: </h2>
+        <img src="Images/ConceptArt.jpg" alt="Concept Art" class="imgCenter">
+        <p>
+            This was my very rough initial concept for the kinematic sculpture. 
+            Using this concept I then started CADing the design in fusion 360.
+        </p>
+        <h2>Design 1:</h2>
+        <img src="Images/V1.png" alt="Design 1" class="imgCenter">
+        <p>
+            This design's assembly was not fully completed but all the parts are there. To take this 3 Dimensional design and convert 
+            it to something readable by the laser cutter there are a few things you have to do.
+        </p>
+        <h3>Steps to take 3D design and convert to laser cutter: </h3>
+        <ul style="list-style-type:decimal; font-size: larger;">
+            <li>
+                Project the faces of the objects to a new sketch
+            </li>
+            <li>
+                Export those sketches to DXF files
+            </li>
+            <li>
+                Organize all the drawings into one big PNG using Ink Scape
+            </li>
+        </ul>
+        <h3>Problem:</h3>
+        <p>
+            However, once I did this I ran into a big problem. When importing the DXF files for any of the spur gears made on fusion 360 
+            a lot of the geometry would not show up.
+
+            <img src="Images/BadGear.png" alt="Broken fusion 360 DXF Gear" class="imgCenter">
+
+        <h3>Solution:</h3>
+
+            I was not able to find any easy fix for this issue so I used an 
+            <a href="https://evolventdesign.com/pages/spur-gear-generator">online spur gear DXF creator</a>.
+            This had the same parameters as the fusion spur-gear-generator so it was pretty easy to translate over.
+
+            <img src="Images/OnlineSpurGearGen.png" alt="online spur-gear-generator" class="imgCenter">
+        </p>
+        <h2>Design 2: </h2>
+        <p>
+            Once I fixed the gear problem I was ready to prototype parts. This is an essential part of the design process and was very helpful
+            for me because it made me realize flaws in my design before I committed to fabricating the entire build.
+        </p>
+        <h3>Prototype Parts:</h3>
+        <img src="" alt="prototype cad image" class="imgCenter">
+        <img src="" alt="prototype parts image" class="imgCenter">
+        <p>
+            One of the issues I noticed was that my tolerances for the press fit parts were off. Previously I had built a 
+            test for tolerances and figured out the Ideal values for press fit construction with cardboard in this <a href="../02/index.html">Project</a>.
+            However, I had mis-inputted the dimensions and things did not fit together.
+        </p>
+        <h2>Final Design: </h2>
+        <h3>Model: </h3>
+        <img src="Images/FullDesignProcess.gif" alt="Gif Of Design Process" class="imgCenter">
+        <h3>Fabrication: </h3>
+        <img src="" alt="Image of Fabrication" class="imgCenter">
+        <h3>Build Process: </h3>
+        <img src="" alt="Image of build process" class="imgCenter">
+        <h3>Final Build:</h3>
+        <img src="" alt="Image of final build" class="imgCenter">
+        <p>I ended up using M3 hardware as axels </p>
+
+
     </main>
 
     <footer>
