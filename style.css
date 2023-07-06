@@ -18,26 +18,57 @@
 }
 
 .HomeHeader {
-    padding: 20px;
-    padding-bottom: 50px;
     position: static;
+    width: 100vw;
     background: var(--primary);
     top: 0;
     right: 0;
     left: 0;
     color: var(--primary);
-    font-size: 25px;
     z-index: 2;
 
 }
 
 .HeaderText {
     text-align: center;
-    padding-bottom: 0px;
-    padding-top: 15px;
     font-size: 50px;
     text-decoration: none;
     color: var(--light);
+}
+
+.headerIcon {
+    padding: 0px;
+    width: 60px;
+    vertical-align:top;
+}
+
+.navBar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.navBar li {
+    display: inline;
+    float: right;
+}
+
+.navBarAContainer {
+    height: 70px;
+}
+
+.navBar a {
+    max-height: 64px;
+    display: block;
+    text-align: center;
+    padding: 23px 16px;
+    text-decoration: none;
+    margin: 0;
+}
+
+.navBar a:hover {
+    background-color: #1b3343;
 }
 
 .HeaderText:visited {
@@ -95,7 +126,7 @@
 
 }
 
-.footerli {
+.footer li {
     display: inline;
     padding-left: 10px;
     padding-right: 10px;
@@ -135,6 +166,7 @@
 }
 
 .pageHeader {
+    color: var(--dark);
     text-align: center;
 }
 
@@ -156,7 +188,7 @@ body {
 
 img {
     max-height: 500px;
-    width: 50% auto;
+    width: 1vw auto;
     padding-top: 20px;
     padding-bottom: 20px;
 }
