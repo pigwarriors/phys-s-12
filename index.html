@@ -8,81 +8,60 @@
     <link rel="stylesheet" href="style.css">
 </head>
 
-<body>
-    <header class="HomeHeader">
-        <ul class="navBar">
-            <li style="float: left;">
-                <div class="navBarAContainer">
-                    <a href="./index.html" style="padding: 5px 25px;" title="Home">
-                        <img src="Images/TabIcon.png" alt="Home" class="headerIcon">
-                    </a>
-                </div>
-            </li>
-            <li>
-                <div class="navBarAContainer">
-                    <a href="./about.html" class="name">About me</a>
-                </div>
-            </li>
-        </ul>
+<body id="home" style="padding:0; margin:0; line-height: normal;">
+    <div class="backgroundImage"></div>
+    <header style="top:0;">
+        <div class="homeTitleText">
+            <div>
+                <p>
+                    Intro to Digital Fabrication 
+                    <br>
+                    <a href="about.html">Brian Twitchell</a>
+                </p>
+            </div>
+        </div>
+        <div class="imageShadow"></div>
     </header>
-
-    <main class="HomeMain">
-        <h1 class="pageHeader" style="font-size: 40px; margin-bottom: 0px;">Introduction To Digital Fabrication: 2023</h1>
-        <div>
-            <table>
-                <tr>
-                    <td>
-                        <div class="classesDiv">
-                            <a href="./01/index.html" class="classLinks">Class 1: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./02/index.html" class="classLinks">Class 2: 2D design and Cutting</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./03/index.html" class="classLinks">Class 3: Kinematic Sculpture</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./04/index.html" class="classLinks">Class 4: Arduino Programming</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./05/index.html" class="classLinks">Class 5: 3d printing and scanning</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./06/index.html" class="classLinks">Class 6: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./07/index.html" class="classLinks">Class 7: Project Proposal</a>
-                        </div>
-                    </td>
-                    <td>
-                        <div class="classesDiv">
-                            <a href="./08/index.html" class="classLinks">Class 8: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./09/index.html" class="classLinks">Class 9: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./10/index.html" class="classLinks">Class 10: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./11/index.html" class="classLinks">Class 11: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./12/index.html" class="classLinks">Class 12: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./13/index.html" class="classLinks">Class 13: Project Proposal</a>
-                        </div>
-                        <div class="classesDiv">
-                            <a href="./14/index.html" class="classLinks">Class 14: Project Proposal</a>
-                        </div>
-                    </td>
-                </tr>
-            </table>
+    
+    <main>
+        <div class="classesList" id="Classes">
+            <a href="/01/index.html" class="classCards" style="background-image: url(https://hosatech.com/wp-content/uploads/2020/07/How-to-Build-Pedalboard-Hosa.jpg);">
+                <p>
+                    Class 1: <br> Project Proposal
+                </p>
+            </a>
+            <a href="/02/index.html" class="classCards" style="background-image: url(./02/Images/Sculpture.JPG);">
+                <p>
+                    Class 2: <br> 2D Design and Cutting
+                </p>
+            </a>
+            <a href="/03/index.html" class="classCards" style="background-image: url(./03/Images/Final\ Design.jpeg);">
+                <p>
+                    Class 3: <br> Kinematic Sculpture 
+                </p>
+            </a>
+            <a href="/04/index.html" class="classCards" style="background-image: url(/04/Images/Schematic.png);">
+                <p>
+                    Class 4: <br> Arduino Programming
+                </p>
+            </a>
+            <a href="/05/index.html" class="classCards" style="background-image: url();">
+                <p>
+                    Class 5: <br> 3d printing and scanning
+                </p>
+            </a>
+            <a href="/06/index.html" class="classCards" style="background-image: url();">
+                <p>
+                    Class 6: <br> Electronic Input Devices
+                </p>
+            </a>
+            <a href="/07/index.html" class="classCards" style="background-image: url();">
+                <p>
+                    Class 7: <br> Electronic Output Devices
+                </p>
+            </a>
         </div>
     </main>
-
-    <div class="footerSpacer" style="height: 50px;"></div>
 
     <footer>
             <ul class="footerList">

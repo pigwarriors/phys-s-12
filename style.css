@@ -1,24 +1,163 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Proza+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
 
 :root {
     --primary: #284B63;
+    --primaryOverlay: #284b6384;
     --secondary: #FF7F11;
+    --secondaryOverlay: #d06b13ef;
     --dark: #353535;
     --med: #e4e4e4;
     --light: #FFFFFF;
+
+}
+
+#home {
+    background-color: var(--primary);
+    color: var(--light);
+    position:static;
+
+}
+
+#home main {
+    margin:0;
+    padding:0 0vw 0 0;
+    max-width: none;
+    max-height: none;
+    z-index: 1;
+    background-color: none;
+
+}
+
+#home header {
+    background-image: url(https://fabricationlab.london/wp-content/uploads/19.11.20_DL_ErikaBoguckaite_05.jpg);
+    background-attachment: fixed;
+    z-index: -1;
+    background-color: var(--primaryOverlay);
+    background-blend-mode: overlay;
+}
+
+.classesList {
+    margin:0;
+    padding:10vw 0vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;   
+    background-color: var(--primary);
+    transition:ease-in-out 0.5s;
 }
 
 
-.HomeMain {
-    padding: 10px;
-    max-width: 100em;
-    margin: 0 auto;
+.classCards {  
+    max-width: 500px;
+    min-width: 100px;
+    width: 25vmax;
+    max-height: 500px;
+    min-height: 100px;
+    height: 25vmax;
+    border-radius: 15%;
+    box-shadow:  30px 30px 60px #203c4f, -30px -30px 60px #305a77;
     text-align: center;
-    color: var(--med);
+    color:var(--light);
+    text-decoration: none;
+    margin: 5% 4%;
+    padding: 0px;
+    line-height: 25vw;
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    background-size: cover;
+    background-position: center;
+    background-color: var(--secondaryOverlay);
+    background-blend-mode: soft-light;
 }
+
+.classCards:hover {  
+    border-radius: 5%;
+    transform:scale(1.1);
+    box-shadow:  60px 60px 120px #203c4f, -60px -60px 120px #305a77;
+    text-align: center;
+    color:var(--light);
+    text-decoration: none;
+}
+
+.classCards p {
+    background-color: var(--primary);
+    background-clip: text;
+    -webkit-background-clip: text;
+    transition:cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    color:transparent;
+    background-blend-mode: soft-light;
+    /* background-size: inherit;
+    background-image: inherit; */
+    background-position: center;
+    font-size: 3vw;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.imageShadow {
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 15vh;
+    background: linear-gradient(0deg, rgba(40,75,99,1) 0%, rgba(0,212,255,0) 100%);
+}
+
+.homeTitleText {
+    background:none;
+    height:100vh;
+    text-align: left;
+    margin: auto;
+    padding: 10px;
+    line-height: 90vh;
+    font-family: 'Raleway';
+}
+
+
+.homeTitleText p {
+    color:var(--secondary);
+    font-size: 4vmax;
+    text-shadow: 0.5vmax 1vmax 3vmax rgb(0, 0, 0), 0 0 1vmax var(--primary);
+    padding: 5vmax 5vmax 5vmax 7vmax;
+    transform:translateX(-2vmax);
+    z-index: 2;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 0px 6vmax 6vmax 0px;
+    background: var(--primary);
+    box-shadow:  40px 40px 70px #222222,
+                -40px -40px 70px #3b3b3b;
+
+}
+
+.homeTitleText a {
+    color:var(--secondary);
+    font-size: 2vmax;
+    font-weight: bolder;
+    z-index: 2;
+    line-height: 1.5;
+    display: inline-block;
+    vertical-align: middle;
+    text-decoration: none;
+    background-color: transparent;
+}
+
+.homeTitleText a:hover {
+    transition: ease-in-out 0.5s;
+    transition-delay: 0.1s;
+    font-size: 2.3vmax;
+    text-shadow:  40px 40px 70px #222222,
+                -40px -40px 70px #3b3b3b;
+}
+
+
 
 .HomeHeader {
-    position: static;
+    position: fixed;
     width: 100vw;
     background: var(--primary);
     top: 0;
@@ -67,8 +206,12 @@
     margin: 0;
 }
 
-.navBar a:hover {
-    background-color: #1b3343;
+.navBarAContainer:hover {
+    background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.25),
+    rgba(0, 0, 0, 0.25)
+  ) var(--primary);
 }
 
 .HeaderText:visited {
@@ -81,22 +224,19 @@
 }
 
 .classLinks {
-    color: var(--dark);
-    text-decoration: underline;
-    text-decoration-color: var(--med);
+    color: var(--light);
+    text-decoration: none;
     font-size: 30px;
+    padding: 50px;
+    margin: 100px;
+    width: 35vb;
+    height: 35vb;
 
 }
 
 .classLinks:visited {
-    text-decoration-color: #FF7F11;
+    text-decoration-color: var(--secondary);
 
-}
-
-.classesDiv {
-    padding: 50px;
-    padding-bottom: 0px;
-    text-align: center;
 }
 
 .icon {
@@ -111,6 +251,7 @@
 .smallIcon {
     width: 15px;
     padding: 0px;
+    margin:0px;
 }
 
 .footerSpacer {
@@ -170,6 +311,10 @@
     text-align: center;
 }
 
+.mainText {
+    transform:translateY(70px);
+}
+
 main {
     padding: 10px;
     max-width: 50%;
@@ -214,6 +359,7 @@ footer {
     left: 0;
     font-size: 25px;
     z-index: 2;
+    transform:translateY(70px)
 }
 
 table {
@@ -227,6 +373,7 @@ p {
 
 a:hover {
     color: var(--secondary);
+    flood-color: var(--secondary);
 }
 
 a {
