@@ -70,9 +70,91 @@
             data from the potentiometer, so I ended up taking the ESP32 out, which made my circuit construction just a little messier.
         </p>
         <img src="" alt="Messy Fixed Build" class="imgCenter">
+        <h2>Arduino Programming</h2>
         <p>
-            
+            Now that were done with the electronics we can add some functionality. The goal here is to make the potentiometer
+            able to control the motor speed as well as direction. We can do this by using the Arduino Map() function and get a
+            motor speed value between -255 (the max speed backwards) and 255 (the max speed forward) based on the potentiometer's
+            min and max values (0, 4095). 
+
+            here is what that code looks like:
         </p>
+        <h3>Potentiometer value to Motor Speed</h3>
+        <pre class="codePar">
+        map(potentiometerValue, 0, 4095, -255, 255);
+        //map(value to look at, min val1, max val1, min val2, max val2)
+        </pre>
+        <p>
+            But theres one problem, the motor controller doesn't naturally read negative values as 
+            backwards. But this is a pretty easy fix. We can write a little function to check if the motor speed value is 
+            negative or positive and based on that we can decide weather to drive the motor forward or backwards.
+        </p>
+        <h3>Actualize Motor Speed</h3>
+        <pre class="codePar">
+        void driveMotorsPlus(int pin1, int pin2, double motorSpeed) {
+            if(MotorSpeed >= 0) {
+            //Serial.println("Forward");
+            analogWrite(pin1, abs(motorSpeed));
+            digitalWrite(pin2, LOW);
+            }
+            else {
+            //Serial.println("Reverse");
+            analogWrite(pin1, LOW);
+            analogWrite(pin2, abs(MotorSpeed));
+            }
+        }
+        </pre>
+        <p>
+            Now that we have this we can just set up some pins and create a loop.
+        </p>
+        <h3>Final Code</h3>
+        <pre class="codePar">
+        const int A1A = 1;  // define pin 1 for A-1A (PWM Speed)
+        const int A1B = 4;  // define pin 4 for A-1B (direction)
+        const int P = 3; // define pin 3 for Potentiometer value
+        double MotorSpeed = 0;
+
+        void setup() {
+            Serial.begin(115200);
+            analogWrite(A1A, 0);   // start with the motors off 
+            digitalWrite(A1B, LOW);
+        }
+
+        //function to actualize motor speed from map
+        void driveMotorsPlus(int pin1, int pin2, double motorSpeed) {
+            if(MotorSpeed >= 0) {
+                analogWrite(pin1, abs(motorSpeed));
+                digitalWrite(pin2, LOW);
+            }
+            else {
+                analogWrite(pin1, LOW);
+                analogWrite(pin2, abs(MotorSpeed));
+            }
+        }
+
+        void loop() {
+            //Get motor speed from potentiometer
+
+            MotorSpeed = map(analogRead(P), 0, 4095, 255, -255);
+
+            //print out motor speed vs pot value
+            Serial.print(analogRead(P));
+            Serial.print(" : ");
+            Serial.println(MotorSpeed);
+
+            //drive motors
+            driveMotorsPlus(A1A, A1B, MotorSpeed);
+            
+        }
+        </pre>
+        <p>
+            I added in a little serial output to show the relationship between the current potentiometer value and motor speed.
+            Now were done! Heres a video of the full thing working
+        </p>
+        <h2>Circuit Working as Intended</h2>
+        <video src="">Video</video>
+
+
     </main>
 
     <footer>

@@ -367,6 +367,17 @@ table {
     margin-right: auto;
 }
 
+.codePar {
+    background-color: var(--dark);
+    color: var(--secondary);
+    border-radius: 1vw;
+    padding: 1vw 0vw 0vw 0vw;
+    line-height: 1.5;
+    font-weight: bolder;
+    font-size: large;
+    line-break: anywhere;
+}
+
 p {
     color: var(--dark);
 }
