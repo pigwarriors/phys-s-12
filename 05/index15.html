@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="../Images/TabIcon.png">
+    <title>Phys-s-12 - Scanning - Brian Twitchell</title>
+    <link rel="stylesheet" href="../style.css">
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.1.1/model-viewer.min.js"></script>
+</head>
+
+<body>
+    <header class="HomeHeader">
+        <ul class="navBar">
+            <li style="float: left;">
+                <div class="navBarAContainer">
+                    <a href="../index.html#Classes" style="padding: 5px 25px;" title="Home">
+                        <img src="../Images/TabIcon.png" alt="Home" class="headerIcon">
+                    </a>
+                </div>
+            </li>
+            <li>
+                <div class="navBarAContainer">
+                    <a href="../about.html" class="name">About me</a>
+                </div>
+            </li>
+        </ul>
+    </header>
+    
+    <main class="mainText">
+        <h1 class="pageHeader"> Class 5: 3d Scanning </h1>
+        <p>
+            This week we took a dive into the world of 3d printing design.
+            This started with learning how to scan objects in the real world
+            and make them part of the digital world. Then we learned how to 3d
+            print models and the basics of some unique 3d printing design technologies.
+        </p>
+        <h2>3D Scanning of the Fab Lab</h2>
+        <model-viewer class="fabLabViewer" alt="3D model of the lab" src="Images/Lab3D.glb" poster="Images/Lab3D.glb" shadow-intensity="1" camera-controls touch-action="pan-y"></model-viewer>
+        <p>
+            This is a 3d model of the fabrication lab this class was in. I made this
+            model using a phone app called polly-cam. The app works by using the built
+            in lidar sensor on most modern phones to make a point map of the space. It
+            then layers on photos taken at the same time as the lidar capture. 
+            <p>You can download the 3D model <a href="Images/Lab3D.glb">here</a>.</p>
+        </p>
+    </main>
+
+    <footer>
+        <ul class="footerList">
+            <li class="footerli" style="float:left;">
+                <a class="githubLink" href="https://github.com/pigwarriors/phys-s-12/tree/main" target="_blank">
+                    Github Page<img class="smallIcon" src="../Images/External Link.png" alt="">
+                </a>
+            </li>
+            <li class="footerli" style="float:right;">
+                <a class="harvardClassLink" href="https://nathanmelenbrink.github.io/intro-dig-fab/index.html" target="_blank">
+                    Class Link <img class="smallIcon" src="../Images/External Link.png" alt="">
+                </a>
+            </li>
+        </ul>
+</footer>
+
+</body>
+</html>

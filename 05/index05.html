@@ -28,7 +28,163 @@
     
     <main class="mainText">
         <h1 class="pageHeader"> Class 5: 3d Printing and Design </h1>
-
+        <p>
+            This week we took a dive into the world of 3d printing design.
+            This started with learning how to scan objects in the real world
+            and make them part of the digital world. Then we learned how to 3d
+            print models and the basics of some unique 3d printing design technologies.
+        </p>
+        <h2>3D printing Project: Locking Cable Holder</h2>
+        <p>
+            I have a problem every day of my cables falling off the 
+            edge of my bedside table and pooling up on the floor like this.
+        </p>
+        <img src="Images/PoolOfCables.JPG" alt="Pool of Cables Image" class="imgCenter">
+        <p>
+            I thought that this assignment would be a perfect excuse to fix
+            this issue. The first thing I did was look up some cable design holders
+            that other people have designed. 
+        </p>
+        <img src="Images/exampleHolder.png" alt="Photo of Example Holders" class="imgCenter">
+        <p>
+            but looking at these designs all of them had a few things that bugged me.
+            
+            <ul>
+                <li>
+                    The cable looked like it could easily pop out of the holder
+                </li>
+                <li>
+                    if you get the cable to fit snugly then there will be pressure on the cable.
+                </li>
+            </ul> 
+        </p>
+        <p>
+            Based on these problems I made some design goals
+        </p>
+        <h3>Design Goals</h3>
+        <ul>
+            <li>
+                Hold the cable in place when needed
+            </li>
+            <li>
+                Don't put much pressure on the cable when in the holder
+            </li>
+            <li>
+                Make it easy to produce
+            </li>
+        </ul>
+        <p>
+            Based on these goals this is what I came up with
+        </p>
+        <h3>Original Design</h3>
+        <img src="/Images/Prototype Drawing" alt="Prototype Drawing" class="imgCenter">
+        <p>
+            This design uses a rotating locking mechanism to make sure the cable stays in the holder while
+            not putting much pressure on it. It also uses a special 3d printing design technique called Print in place.
+            This means that you can print the object and it will be assembled already. In our case the rotating lock will
+            be pre assembled inside of the 2nd piece. 
+        </p>
+        <h2>Version 1:</h2>
+        <p>
+            To realize this concept I used a program called fusion 360 to cad model the holder.
+        </p>
+        <img src="" alt="Image of original cad model" class="imgCenter">
+        <p>
+            I then exported this model to an STL file and imported it to prusa slicer.
+        </p>
+        <img src="" alt="Image of model in Prusa Slicer" class="imgCenter">
+        <p>
+            Prusa slicer is a software that makes it easy to get your model ready to print.
+            It will generate a g-code (what the 3d printer reads) for your model super quickly
+            and will make sure that it is 3d printable. It can add supports to do this or a
+            extra adhesion base.
+        </p>
+        <img src="" alt="sliced Model" class="imgCenter">
+        <p>
+            Here is the printed model.
+        </p>
+        <img src="Images/Version 1.JPG" alt="v1 printed model" class="imgCenter">
+        <p>
+            This first prototype had a few problems. It was supper finicky and the rotating piece would rotate out of the housing
+            like this.
+        </p>
+        <video class="imgCenter" width="1000" height="600" controls autoplay>
+            <source src="Images/" type="video/mp4" style="transform: rotate(-90deg);">
+        </video>
+        <h2>Version 2:</h2>
+        <p>
+            This version made the opening in the front smaller to try and solve the popping out issue. The first time I printed this model I 
+            did not slice it well. The little knob on the rotating piece was on the same side as the handle so there was
+            a lot of execs support material. I moved the knob to the bottom to fix this.
+        </p>
+        <img src="" alt="Version 2 Cad" class="imgCenter">
+        <p>
+            Here it is in prusa slicer with less support material.
+        </p>
+        <img src="" alt="Version 2 Sliced" class="imgCenter">
+        <img src="Images/Version 2.JPG" alt="Version 2 printed" class="imgCenter">
+        <p>
+            here is the 2nd Version done! It still has the same popping out problem
+            but it was much more efficient to print.
+        </p>
+        <h2>Version 3:</h2>
+        <p>
+            Another problem that I've encountered in the past is how I originally designed
+            the cable holder in cad. It is very difficult to make modifications to
+            the design. To fix this I decided to redesign the entire thing but this time with
+            parametric design philosophy in mind. This has you make variables
+            to define dimensions in the model. 
+        </p>
+        <img src="" alt="Screen shot of variables" class="imgCenter">
+        <p>
+            In this design I also added some interlocking
+            edges to the design to try and make it harder for them to
+            split.
+        </p>
+        <img src="Images/Version 3 interlocking.JPG" alt="Interlocking edges" class="imgCenter">
+        <p>
+            To make these edges work I also decided to increase my wall size,
+            which was now super easy because of my parametric design!
+        </p>
+        <img src="Images/Version 3.JPG" alt="Version 3 Printed" class="imgCenter">
+        <p>
+            This version was much easier to make changes with and printed efficiently 
+            but the same original issue still happened. The interlocking walls didn't work.
+        </p>
+        <h2>Version 4:</h2>
+        <p>
+            To finally fix the popping out issue I made the cable opening really small.
+            Again, this was super easy to do because of my parametric design.
+        </p>
+        <img src="" alt="Smaller opening image" class="imgCenter">
+        <img src="Images/version 4.JPG" alt="Printed Version 4" class="imgCenter">
+        <p>
+            It worked! The locking part didn't pop out! My only issues with this design
+            is its hard to turn using the little knob and it is kinda bulky.
+        </p>
+        <h2>Version 5:</h2>
+        <p>
+            This version I made the wall size a bit smaller and I extended the bottom
+            so you can hold on to it and rotate the locking bit.
+        </p>
+        <img src="Images/version 5.JPG" alt="Version 5 Printed" class="imgCenter">
+        <img src="Images/version 5 interlocking.JPG" alt="Hold On bit shown" class="imgCenter">
+        <p>
+            I'm super happy with how this design came out. I just want more of them!
+        </p>
+        <h2>Version 6 (kinda): </h2>
+        <p>
+            I stacked a bunch of the cable holders next to each other using fusion360's
+            rectangular pattern tool.
+        </p>
+        <img src="" alt="version 6 model" class="imgCenter">
+        <img src="Images/version 6.JPG" alt="Version 6 printed" class="imgCenter">
+        <img src="" alt="Version 6 Being used" class="imgCenter">
+        <p>
+            This design works super well and now I don't have a pool of cables!
+            I used a little piece of double sided tape to attach the holder to the
+            table.
+        </p>
     </main>
 
     <footer>
