@@ -6,7 +6,7 @@
     --primary: #284B63;
     --primaryOverlay: #284b6384;
     --secondary: #FF7F11;
-    --secondaryOverlay: #d06b13ef;
+    --secondaryOverlay: #d06b13b6;
     --dark: #353535;
     --med: #e4e4e4;
     --light: #FFFFFF;
@@ -31,7 +31,7 @@
 }
 
 #home header {
-    background-image: url(https://fabricationlab.london/wp-content/uploads/19.11.20_DL_ErikaBoguckaite_05.jpg);
+    background-image: url(Images/Lab.jpeg);
     background-attachment: fixed;
     z-index: -1;
     background-color: var(--primaryOverlay);
